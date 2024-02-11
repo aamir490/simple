@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  app:
+    image: docker-nextjs-dev
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - ./public:/usr/src/app/public
+      - ./pages:/usr/src/app/pages
+      - ./styles:/usr/src/app/styles

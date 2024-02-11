@@ -1,0 +1,347 @@
+@import './sass/_variable.scss';
+
+// {/* login page background */}
+.main_page {
+    min-height: 100vh;
+    background: $background;
+    display: grid;
+    place-items: center;
+
+    //   {/* login form center */}
+    & .main_signUp {
+        display: grid;
+        place-items: center;
+
+        // {/* logo */}
+        & .Image_logo {
+            width: 20rem;
+            margin: 1rem 0rem;
+
+            & .logo_svg {
+                fill: $brand-clr;
+                stroke: none;
+                stroke-width: none;
+
+            }
+        }
+
+        // {/* main form section */}
+        & .signup_form {
+            width: 38rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $white;
+            border-radius: .8rem;
+            height: 58rem;
+            margin: 1rem 0rem 3rem;
+
+            // {/* form content */}
+            &>div {
+                width: 100%;
+
+                & .login_title {
+                    text-align: center;
+                    color: $black;
+                    margin-bottom: 1rem;
+
+                    & .join_famstep {
+                        display: block;
+                        font-size: 2.8rem;
+                        line-height: 3.4rem;
+
+
+                    }
+
+                    & .or {
+                        font-size: 1.6rem;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// password show and hide
+.passInput_icon {
+    position: relative;
+}
+
+.passwordIcons_cover {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+
+
+}
+
+.password_Icons {
+    width: 1.9rem;
+    height: 1.9rem;
+    fill: none;
+    stroke: $brand_clr;
+    stroke-width: .18rem;
+
+
+}
+
+
+
+//brand clr
+.my_link {
+    color: $brand_clr;
+    display: inline-block;
+
+}
+
+// control size of forms inner content
+.signup_form form {
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: auto;
+    width: 80%;
+    // border: 1px solid red;
+
+    & input {
+        margin-top: 1.5rem;
+        height: 5rem;
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 1.5rem 1.5rem 0rem;
+        border-radius: .5rem;
+        border: 1px solid $border;
+        background: $background;
+        color: $black;
+        // font-family: 'Source Sans Pro', sans-serif ; 
+
+    }
+
+    // button
+    & button {
+        margin-top: 1.5rem;
+        width: 100%;
+        padding: 1.2rem 0rem;
+        background: $brand_clr;
+        border-radius: 20rem;
+        border: none;
+        color: $white;
+        font-weight: 500;
+        font-size: 1.7rem;
+        text-shadow: 1px 1px 1px #000;
+        cursor: pointer;
+
+        &:hover {
+            background: #063a6e;
+
+        }
+    }
+}
+
+// label animation
+.input_bx {
+    position: relative;
+
+}
+
+.label {
+    position: absolute;
+    top: 3rem;
+    left: 1.5rem;
+    // padding: 10px;
+    font-size: 1.5rem;
+    color: $gray_content;
+    // text-transform:lowercase;
+    pointer-events: none;
+    transition: 0.1s;
+}
+
+.input_bx input:valid~.label,
+.input_bx input:focus~.label {
+    color: $brand-clr;
+    transform: translateX(0px) translateY(-7px);
+    font-size: 1.3rem;
+    font-weight: 500;
+    background: $background;
+    // border-top: 1px solid $brand-clr;
+    letter-spacing: 0.1rem;
+}
+
+//policy and agreement
+.agree {
+    display: block;
+    
+}
+
+.minusAgree {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 1rem 0rem;
+    color: $gray_content;
+
+}
+
+
+// {/* extra login */}
+
+.connectwith {
+    position: relative;
+    color: $gray_content;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 2rem 0rem;
+}
+
+.connectwith::before {
+    content: "";
+    position: absolute;
+    bottom: .8rem;
+    left: 1rem;
+    background-color: $gray_content;
+    height: .1rem;
+    width: 7rem;
+
+
+}
+
+.connectwith::after {
+    content: "";
+    position: absolute;
+    bottom: .8rem;
+    right: 1rem;
+    background-color: $gray_content;
+    height: .1rem;
+    width: 7rem;
+
+
+}
+
+.social_icons {
+    display: flex;
+    justify-content: space-evenly;
+
+    & .FB{
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+    }
+
+}
+
+
+// media query for 4k screen
+@media (min-width:1472px) {
+    .main_page {
+        .main_signUp {
+            height: 95vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
+
+// media query for mobile screen
+
+@media (max-width:450px) {
+
+    .main_page {
+        background-color: $white;
+
+        .main_signUp {
+
+            & .Image_logo {
+                width: 24rem;
+                margin: 1rem 0rem 0rem 0rem;
+
+            }
+
+            & .signup_form {
+                width: 100vw;
+                background: $white;
+                border-radius: 0rem;
+                height: 62rem;
+                margin: 1rem 0rem;
+
+
+                &>div {
+                    & .login_title {
+                        & .join_famstep {
+                            font-size: 3rem;
+
+                        }
+
+                        & .or {
+                            font-size: 2rem;
+
+                        }
+                    }
+                }
+
+
+            }
+
+
+        }
+    }
+
+    .signup_form form {
+        width: 85%;
+
+        & input {
+            height: 5.5rem;
+            font-size: 2rem;
+            border-radius: .3rem;
+        }
+        & button {
+            padding: 1.5rem 0rem;
+            font-size: 2rem;
+        }
+    }
+
+    .label {
+        top: 3.3rem;
+        font-size: 1.8rem;
+    }
+
+    .minusAgree {
+        font-size: 1.4rem;
+        margin: 1.5rem 0rem;
+        line-height: 2.5rem;
+
+    }
+
+    
+
+    .connectwith {
+        font-size: 2rem;
+    }
+
+    .connectwith::before,
+    .connectwith::after {
+        bottom: 1.1rem;
+    }
+
+    .password_Icons {
+        width: 2.5rem;
+        height: 2.5rem;
+
+
+    }
+
+
+    .social_icons {
+
+        & .FB {
+            height: 6rem;
+            width: 6rem;
+        }
+
+    }
+
+}

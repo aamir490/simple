@@ -9,12 +9,39 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.511.0",
+    "@next-auth/mongodb-adapter": "^1.1.1",
+    "aws-sdk": "^2.1555.0",
+    "axios": "^1.6.7",
+    "bcryptjs": "^2.4.3",
+    "country-state-city": "^3.2.1",
+    "express": "^4.18.2",
+    "formik": "^2.4.5",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1",
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^3.0.1",
+    "next": "14.1.0",
+    "next-auth": "^4.20.0",
+    "next-connect": "^1.0.0",
+    "nextjs-progressbar": "^0.0.16",
+    "node": "^21.6.1",
+    "nodemailer": "^6.9.9",
+    "path": "^0.12.7",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "react-icons": "^5.0.1",
+    "sass": "^1.70.0",
+    "sharp": "^0.33.2",
+    "url": "^0.11.3",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.1.0",
+    "nodemon": "^3.0.3"
   }
 }
