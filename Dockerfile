@@ -30,6 +30,39 @@ CMD ["next", "start"]
 
 
 
+
+# FROM node:18-alpine
+
+# # Create and set working directory
+# RUN mkdir -p /usr/src/app
+# WORKDIR /usr/src/app
+
+# # Copy package.json and install dependencies
+# COPY package.json  ./
+# RUN npm install --force
+
+# COPY next.config.js ./next.config.js
+# # Copy application code
+# COPY . .
+
+# COPY pages ./pages
+# COPY public ./public
+# COPY styles ./styles
+# # Build the application
+# # ENV BUILD_STANDALONE true
+# RUN npm run build
+
+
+# EXPOSE 3000
+# # ENV PORT 3000
+# # ENV HOSTNAME "localhost"
+# # Run the application
+# CMD ["next", "start"]
+
+
+
+
+
 # # Slightly modified version of next.js's with-docker Dockerfile
 # # https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile
 
